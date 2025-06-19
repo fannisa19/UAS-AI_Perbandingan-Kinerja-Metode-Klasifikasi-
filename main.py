@@ -19,9 +19,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=0
 )
 
-# ----------------------------
 # Decision Tree Classifier
-# ----------------------------
 print("\n=== Decision Tree ===")
 dt_model = DecisionTreeClassifier(max_depth=5, random_state=0)
 dt_model.fit(X_train, y_train)
@@ -36,9 +34,7 @@ disp_dt.plot(cmap='Blues')
 plt.title("Confusion Matrix - Decision Tree")
 plt.show()
 
-# ----------------------------
 # K-Nearest Neighbor (k=5)
-# ----------------------------
 print("\n=== KNN (k=5) ===")
 knn_model = KNeighborsClassifier(n_neighbors=5)
 knn_model.fit(X_train, y_train)
@@ -53,9 +49,7 @@ disp_knn.plot(cmap='Greens')
 plt.title("Confusion Matrix - KNN")
 plt.show()
 
-# ----------------------------
 # Visualisasi Akurasi untuk nilai k
-# ----------------------------
 from sklearn.metrics import accuracy_score
 
 k_values = range(1, 21)
